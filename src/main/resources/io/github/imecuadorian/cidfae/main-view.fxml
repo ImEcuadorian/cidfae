@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="io.github.imecuadorian.cidfae.controller.view.MainViewController">
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #003366;">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Ecuadorian Air Force" style="-fx-text-fill: white;">
+                <font>
+                    <Font name="Arial" size="24"/>
+                </font>
+            </Label>
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="5">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Work Orders">
+                <font>
+                    <Font name="Arial" size="16"/>
+                </font>
+            </Label>
+            <TableView fx:id="batchTable" fixedCellSize="30">
+                <columns>
+                    <TableColumn fx:id="colOrder" text="Work Order" prefWidth="100"/>
+                    <TableColumn fx:id="colTitle" text="Title" prefWidth="200"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Label text="Order Details">
+                <font>
+                    <Font name="Arial" size="16"/>
+                </font>
+            </Label>
+            <Label text="Batch Information" style="-fx-font-weight: bold;"/>
+            <GridPane fx:id="detailGrid" hgap="10" vgap="5"/>
+        </VBox>
+    </center>
+</BorderPane>
